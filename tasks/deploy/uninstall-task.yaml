@@ -20,7 +20,7 @@ spec:
       env:
         - name: KUBECONFIG
           value: $(params.kubeconfig-path)
-      image: registry.redhat.io/openshift4/ose-cli:latest
+      image: docker.io/s390x/alpine:3.18
       imagePullPolicy: IfNotPresent
     - name: uninstall-operators
       args:
@@ -34,7 +34,7 @@ spec:
       env:
         - name: KUBECONFIG
           value: $(params.kubeconfig-path)
-      image: registry.redhat.io/openshift4/ose-cli:latest
+      image: docker.io/s390x/alpine:3.18
       imagePullPolicy: IfNotPresent
     - name: delete-cert-manager-namespace
       args:
@@ -45,7 +45,7 @@ spec:
       env:
         - name: KUBECONFIG
           value: $(params.kubeconfig-path)
-      image: registry.redhat.io/openshift4/ose-cli:latest
+      image: docker.io/s390x/alpine:3.18
       imagePullPolicy: IfNotPresent
     - name: delete-kuadrant-crd
       args:
@@ -56,7 +56,7 @@ spec:
       env:
         - name: KUBECONFIG
           value: $(params.kubeconfig-path)
-      image: registry.redhat.io/openshift4/ose-cli:latest
+      image: docker.io/s390x/alpine:3.18
       imagePullPolicy: IfNotPresent
     - name: delete-istio-crd
       args:
@@ -67,7 +67,7 @@ spec:
       env:
         - name: KUBECONFIG
           value: $(params.kubeconfig-path)
-      image: registry.redhat.io/openshift4/ose-cli:latest
+      image: docker.io/s390x/alpine:3.18
       imagePullPolicy: IfNotPresent
   workspaces:
   - name: shared-workspace
