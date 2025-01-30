@@ -41,7 +41,7 @@ spec:
     - name: kube-api
       value: $(params.kube-api)
     - name: testsuite-image
-      value: quay.io/rh_integration/ci-toolbox:latest
+      value: registry.redhat.io/openshift4/ose-cli:latest
     taskRef:
       kind: Task
       name: kubectl-login
