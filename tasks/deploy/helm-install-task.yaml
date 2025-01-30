@@ -43,7 +43,7 @@ spec:
     env:
       - name: KUBECONFIG
         value: $(params.kubeconfig-path)
-    image: quay.io/rhn_support_azgabur/alpine/k8s:latest
+    image: quay.io/rh_integration/ci-toolbox:latest
     imagePullPolicy: IfNotPresent
   - name: helm-install-instances
     args:
@@ -69,7 +69,7 @@ spec:
     env:
       - name: KUBECONFIG
         value: $(params.kubeconfig-path)
-    image: quay.io/rhn_support_azgabur/alpine/k8s:latest
+    image: quay.io/rh_integration/ci-toolbox:latest
     imagePullPolicy: IfNotPresent
   - name: run-hack-sh
     args:
@@ -79,7 +79,7 @@ spec:
     env:
       - name: KUBECONFIG
         value: $(params.kubeconfig-path)
-    image: quay.io/rhn_support_azgabur/alpine/k8s:latest
+    image: quay.io/rh_integration/ci-toolbox:latest
     imagePullPolicy: IfNotPresent
   volumes:
     - secret:

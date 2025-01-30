@@ -20,7 +20,7 @@ spec:
       limits:
         cpu: 250m
         memory: 128Mi
-    image: quay.io/rhn_support_azgabur/alpine/k8s:latest
+    image: quay.io/rh_integration/ci-toolbox:latest
     imagePullPolicy: IfNotPresent
   workspaces:
   - name: shared-workspace
