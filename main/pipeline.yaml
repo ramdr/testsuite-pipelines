@@ -79,24 +79,24 @@ spec:
       workspaces:
         - name: shared-workspace
   finally:
-    - name: upload-results
-      when:
-        - input: $(params.upload-results)
-          operator: in
-          values: ["true"]
-      params:
-        - name: launch-name
-          value: $(params.launch-name)
-        - name: testsuite-image
-          value: $(params.testsuite-image)
-        - name: make-target
-          value: $(params.make-target)
-        - name: rp-project
-          value: $(params.rp-project)
-      taskRef:
-        kind: Task
-        name: upload-results
-      workspaces:
-        - name: shared-workspace
+    # - name: upload-results
+    #   when:
+    #     - input: $(params.upload-results)
+    #       operator: in
+    #       values: ["true"]
+    #   params:
+    #     - name: launch-name
+    #       value: $(params.launch-name)
+    #     - name: testsuite-image
+    #       value: $(params.testsuite-image)
+    #     - name: make-target
+    #       value: $(params.make-target)
+    #     - name: rp-project
+    #       value: $(params.rp-project)
+    #   taskRef:
+    #     kind: Task
+    #     name: upload-results
+    #   workspaces:
+    #     - name: shared-workspace
   workspaces:
     - name: shared-workspace
